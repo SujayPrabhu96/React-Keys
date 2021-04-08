@@ -19,9 +19,8 @@ const CarouselWithIndexKey = ({ itemsArray }) => {
       }
       level = active - i;
       const newElement = {
-        element: itemsArray[index].card,
+        element: itemsArray[index],
         level: level,
-        index: itemsArray[index].id,
       };
       setItems((oldArray) => [...oldArray, newElement]);
     }

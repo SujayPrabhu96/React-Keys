@@ -6,7 +6,7 @@ import { IMAGE_URL } from "./constants/index";
 import "./App.css";
 import { WITHOUT_INDEX_AS_KEY, WITH_INDEX_AS_KEY } from "./constants/index";
 
-const itemsArray = [
+const itemsArrayWithId = [
   {
     id: 1,
     card: (
@@ -45,6 +45,15 @@ const itemsArray = [
   },
 ];
 
+const itemsArrayWithoutId = [
+  <Card image={IMAGE_URL} text="Full-day Party Cruise with Snorkeling 1" />,
+  <Card image={IMAGE_URL} text="Full-day Party Cruise with Snorkeling 2" />,
+  <Card image={IMAGE_URL} text="Full-day Party Cruise with Snorkeling 3" />,
+  <Card image={IMAGE_URL} text="Full-day Party Cruise with Snorkeling 4" />,
+  <Card image={IMAGE_URL} text="Full-day Party Cruise with Snorkeling 5" />,
+  <Card image={IMAGE_URL} text="Full-day Party Cruise with Snorkeling 6" />,
+];
+
 const App = () => {
   const [title, setTitle] = useState(WITHOUT_INDEX_AS_KEY);
 
@@ -59,9 +68,9 @@ const App = () => {
       <h3>{title}</h3>
       <button onClick={handleClick}>Toggle View</button>
       {title === WITHOUT_INDEX_AS_KEY ? (
-        <CarouselWithoutIndexKey itemsArray={itemsArray} />
+        <CarouselWithoutIndexKey itemsArray={itemsArrayWithId} />
       ) : (
-        <CarouselWithIndexKey itemsArray={itemsArray} />
+        <CarouselWithIndexKey itemsArray={itemsArrayWithoutId} />
       )}
     </div>
   );
