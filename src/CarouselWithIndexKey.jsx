@@ -28,7 +28,7 @@ const CarouselWithIndexKey = ({ itemsArray }) => {
 
   useEffect(() => {
     generateItems();
-  }, [active]);
+  }, [active, direction]);
 
   const moveLeft = () => {
     let newActive = active;
