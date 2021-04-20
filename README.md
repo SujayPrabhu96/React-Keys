@@ -11,5 +11,8 @@ yarn
 yarn add react-transition-group
 yarn start
 ```
-### Demo LinK
+### Demo Link
 https://suspicious-davinci-73dfae.netlify.app/
+
+### Blog Link
+https://crypt.codemancers.com/posts/2021-04-14-using-index-of-an-array-as-key-can-lead-to-bad-consequences/
